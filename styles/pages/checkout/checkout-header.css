@@ -26,13 +26,9 @@
   width: 150px;
 }
 
-.amazon-logo {
+.JFC-logo {
   width: 100px;
   margin-top: 12px;
-}
-
-.amazon-mobile-logo {
-  display: none;
 }
 
 /* @media is used to create responsive design (making the
@@ -44,14 +40,8 @@
     width: auto;
   }
 
-  .amazon-logo {
+  .JFC-logo {
     display: none;
-  }
-
-  .amazon-mobile-logo {
-    display: inline-block;
-    height: 35px;
-    margin-top: 5px;
   }
 }
 

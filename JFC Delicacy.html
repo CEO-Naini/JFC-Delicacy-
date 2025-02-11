@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JFC Delicacy Project</title>
+
+    <!-- This code is needed for responsive design to work.
+      (Responsive design = make the website look good onsadd
+      smaller screen sizes like a phone or a tablet). -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Load a font called Roboto from Google Fonts. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Here are the CSS files for this page. -->
+    <link rel="stylesheet" href="styles/shared/general.css">
+    <link rel="stylesheet" href="styles/shared/JFC-header.css">
+    <link rel="stylesheet" href="styles/pages/JFC.css">
+  </head>
+  <body>
+    <div class="JFC-header">
+      <div class="JFC-header-left-section">
+        <a href="JFC Delicacy.html" class="header-link">
+          <img class="JFC-logo"
+            src="images/icons/jfc delicacies.png">
+        </a>
+      </div>
+
+      <div class="JFC-header-middle-section">
+        <input class="search-bar" type="text" placeholder="Search">
+        <button class="search-button">
+          <img class="search-icon" src="images/icons/search-icon.png">
+        </button>
+      </div>
+
+      <div class="JFC-header-right-section">
+        <a class="orders-link header-link" href="orders.html">
+          <span class="returns-text">Returns</span>
+          <span class="orders-text">& Orders</span>
+        </a>
+
+        <a class="cart-link header-link" href="checkout.html">
+          <img class="cart-icon" src="images/icons/cart-icon.png">
+          <div class="cart-quantity js-cart-quantity">0</div>
+          <div class="cart-text">Cart</div>
+        </a>
+      </div>
+    </div>
+    
+    <div class="main">
+      <div class="products-grid js-products-grid">
+        <div class="product-container">
+          <div class="product-image-container">
+            <img class="product-image"
+              src="images/products/200g chips masala.jpg">
+          </div>
+
+          <div class="product-name limit-text-to-2-lines">
+            Chips Masala
+          </div>
+
+          <div class="product-rating-container">
+            <img class="product-rating-stars"
+              src="images/ratings/rating-45.png">
+            <div class="product-rating-count link-primary">
+              87
+            </div>
+          </div>
+
+          <div class="product-price">
+            Ksh 200
+          </div>
+
+          <div class="product-quantity-container">
+            <select>
+              <option selected value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+
+          <div class="product-spacer"></div>
+
+          <div class="added-to-cart">
+            <img src="images/icons/checkmark.png">
+            Added
+          </div>
+
+          <button class="add-to-cart-button button-primary">
+            Add to Cart
+          </button>
+        </div>
+
+        <div class="product-container">
+          <div class="product-image-container">
+            <img class="product-image"
+              src="images/products/egg fried burger.jpg">
+          </div>
+
+          <div class="product-name limit-text-to-2-lines">
+            Egg fried burger
+          </div>
+
+          <div class="product-rating-container">
+            <img class="product-rating-stars"
+              src="images/ratings/rating-40.png">
+            <div class="product-rating-count link-primary">
+              10
+            </div>
+          </div>
+
+          <div class="product-price">
+            Ksh 150
+          </div>
+
+          <div class="product-quantity-container">
+            <select>
+              <option selected value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+
+          <div class="product-spacer"></div>
+
+          <div class="added-to-cart">
+            <img src="images/icons/checkmark.png">
+            Added
+          </div>
+
+          <button class="add-to-cart-button button-primary">
+            Add to Cart
+          </button>
+        </div>
+
+        <div class="product-container">
+          <div class="product-image-container">
+            <img class="product-image"
+              src="images/products/frozen french fries.jpg">
+          </div>
+
+          <div class="product-name limit-text-to-2-lines">
+            French fries
+          </div>
+
+          <div class="product-rating-container">
+            <img class="product-rating-stars"
+              src="images/ratings/rating-45.png">
+            <div class="product-rating-count link-primary">
+              56
+            </div>
+          </div>
+
+          <div class="product-price">
+            Ksh 430
+          </div>
+
+          <div class="product-quantity-container">
+            <select>
+              <option selected value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+
+          <div class="product-spacer"></div>
+
+          <div class="added-to-cart">
+            <img src="images/icons/checkmark.png">
+            Added
+          </div>
+
+          <button class="add-to-cart-button button-primary">
+            Add to Cart
+          </button>
+        </div>
+        <div class="product-container">
+          <div class="product-image-container">
+            <img class="product-image"
+              src="images/products/in &out burger.jpg">
+          </div>
+
+          <div class="product-name limit-text-to-2-lines">
+            In &Out burger
+          </div>
+
+          <div class="product-rating-container">
+            <img class="product-rating-stars"
+              src="images/ratings/rating-45.png">
+            <div class="product-rating-count link-primary">
+              58
+            </div>
+          </div>
+
+          <div class="product-price">
+            Ksh 230
+          </div>
+
+          <div class="product-quantity-container">
+            <select>
+              <option selected value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+
+          <div class="product-spacer"></div>
+
+          <div class="added-to-cart">
+            <img src="images/icons/checkmark.png">
+            Added
+          </div>
+
+          <button class="add-to-cart-button button-primary">
+            Add to Cart
+          </button>
+        </div>
+        <div class="product-container">
+          <div class="product-image-container">
+            <img class="product-image"
+              src="images/products/200g Bhajia.jpeg">
+          </div>
+
+          <div class="product-name limit-text-to-2-lines">
+            200g Bhajia
+          </div>
+
+          <div class="product-rating-container">
+            <img class="product-rating-stars"
+              src="images/ratings/rating-45.png">
+            <div class="product-rating-count link-primary">
+              37
+            </div>
+          </div>
+
+          <div class="product-price">
+            Ksh 230
+          </div>
+
+          <div class="product-quantity-container">
+            <select>
+              <option selected value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+
+          <div class="product-spacer"></div>
+
+          <div class="added-to-cart">
+            <img src="images/icons/checkmark.png">
+            Added
+          </div>
+
+          <button class="add-to-cart-button button-primary">
+            Add to Cart
+          </button>
+        </div>
+        <div class="product-container">
+          <div class="product-image-container">
+            <img class="product-image"
+              src="images/products/5 piece chicken.jpeg">
+          </div>
+
+          <div class="product-name limit-text-to-2-lines">
+            5 piece chicken
+          </div>
+
+          <div class="product-rating-container">
+            <img class="product-rating-stars"
+              src="images/ratings/rating-45.png">
+            <div class="product-rating-count link-primary">
+              76
+            </div>
+          </div>
+
+          <div class="product-price">
+            Ksh 1230
+          </div>
+
+          <div class="product-quantity-container">
+            <select>
+              <option selected value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+
+          <div class="product-spacer"></div>
+
+          <div class="added-to-cart">
+            <img src="images/icons/checkmark.png">
+            Added
+          </div>
+
+          <button class="add-to-cart-button button-primary">
+            Add to Cart
+          </button>
+        </div>
+        <div class="product-container">
+          <div class="product-image-container">
+            <img class="product-image"
+              src="images/products/Beef stew with rice.jpeg">
+          </div>
+
+          <div class="product-name limit-text-to-2-lines">
+            Beef stew with rice
+          </div>
+
+          <div class="product-rating-container">
+            <img class="product-rating-stars"
+              src="images/ratings/rating-45.png">
+            <div class="product-rating-count link-primary">
+              90
+            </div>
+          </div>
+
+          <div class="product-price">
+            Ksh 199
+          </div>
+
+          <div class="product-quantity-container">
+            <select>
+              <option selected value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+
+          <div class="product-spacer"></div>
+
+          <div class="added-to-cart">
+            <img src="images/icons/checkmark.png">
+            Added
+          </div>
+
+          <button class="add-to-cart-button button-primary">
+            Add to Cart
+          </button>
+        </div>
+        <div class="product-container">
+          <div class="product-image-container">
+            <img class="product-image"
+              src="images/products/chapo beef.jpeg">
+          </div>
+
+          <div class="product-name limit-text-to-2-lines">
+            Chapo beef
+          </div>
+
+          <div class="product-rating-container">
+            <img class="product-rating-stars"
+              src="images/ratings/rating-45.png">
+            <div class="product-rating-count link-primary">
+              144
+            </div>
+          </div>
+
+          <div class="product-price">
+            Ksh 120
+          </div>
+
+          <div class="product-quantity-container">
+            <select>
+              <option selected value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+
+          <div class="product-spacer"></div>
+
+          <div class="added-to-cart">
+            <img src="images/icons/checkmark.png">
+            Added
+          </div>
+
+          <button class="add-to-cart-button button-primary">
+            Add to Cart
+          </button>
+        </div>
+        <div class="product-container">
+          <div class="product-image-container">
+            <img class="product-image"
+              src="images/products/Chips mwitu.jpeg">
+          </div>
+
+          <div class="product-name limit-text-to-2-lines">
+            Chips mwitu
+          </div>
+
+          <div class="product-rating-container">
+            <img class="product-rating-stars"
+              src="images/ratings/rating-45.png">
+            <div class="product-rating-count link-primary">
+              30
+            </div>
+          </div>
+
+          <div class="product-price">
+            Ksh 199
+          </div>
+
+          <div class="product-quantity-container">
+            <select>
+              <option selected value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+
+          <div class="product-spacer"></div>
+
+          <div class="added-to-cart">
+            <img src="images/icons/checkmark.png">
+            Added
+          </div>
+
+          <button class="add-to-cart-button button-primary">
+            Add to Cart
+          </button>
+        </div>
+        <div class="product-container">
+          <div class="product-image-container">
+            <img class="product-image"
+              src="images/products/pilau beef.jpeg">
+          </div>
+
+          <div class="product-name limit-text-to-2-lines">
+            Pilau beef
+          </div>
+
+          <div class="product-rating-container">
+            <img class="product-rating-stars"
+              src="images/ratings/rating-45.png">
+            <div class="product-rating-count link-primary">
+              89
+            </div>
+          </div>
+
+          <div class="product-price">
+            Ksh 130
+          </div>
+
+          <div class="product-quantity-container">
+            <select>
+              <option selected value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+
+          <div class="product-spacer"></div>
+
+          <div class="added-to-cart">
+            <img src="images/icons/checkmark.png">
+            Added
+          </div>
+
+          <button class="add-to-cart-button button-primary">
+            Add to Cart
+          </button>
+        </div>
+        <div class="product-container">
+          <div class="product-image-container">
+            <img class="product-image"
+              src="images/products/matoke fries.jpeg">
+          </div>
+
+          <div class="product-name limit-text-to-2-lines">
+            Matoke fries
+          </div>
+
+          <div class="product-rating-container">
+            <img class="product-rating-stars"
+              src="images/ratings/rating-45.png">
+            <div class="product-rating-count link-primary">
+              23
+            </div>
+          </div>
+
+          <div class="product-price">
+            Ksh 149
+          </div>
+
+          <div class="product-quantity-container">
+            <select>
+              <option selected value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+
+          <div class="product-spacer"></div>
+
+          <div class="added-to-cart">
+            <img src="images/icons/checkmark.png">
+            Added
+          </div>
+
+          <button class="add-to-cart-button button-primary">
+            Add to Cart
+          </button>
+        </div>
+        <div class="product-container">
+          <div class="product-image-container">
+            <img class="product-image"
+              src="images/products/scrambled eggs and beef over rice.jpeg">
+          </div>
+
+          <div class="product-name limit-text-to-2-lines">
+            Scrambled eggs & beef over rice
+          </div>
+
+          <div class="product-rating-container">
+            <img class="product-rating-stars"
+              src="images/ratings/rating-45.png">
+            <div class="product-rating-count link-primary">
+              30
+            </div>
+          </div>
+
+          <div class="product-price">
+            Ksh 299
+          </div>
+
+          <div class="product-quantity-container">
+            <select>
+              <option selected value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+
+          <div class="product-spacer"></div>
+
+          <div class="added-to-cart">
+            <img src="images/icons/checkmark.png">
+            Added
+          </div>
+
+          <button class="add-to-cart-button button-primary">
+            Add to Cart
+          </button>
+        </div>
+        <div class="product-container">
+          <div class="product-image-container">
+            <img class="product-image"
+              src="images/products/kachumbari salad.jpeg">
+          </div>
+
+          <div class="product-name limit-text-to-2-lines">
+            Kachumbari salad
+          </div>
+
+          <div class="product-rating-container">
+            <img class="product-rating-stars"
+              src="images/ratings/rating-45.png">
+            <div class="product-rating-count link-primary">
+              56
+            </div>
+          </div>
+
+          <div class="product-price">
+            Ksh 189
+          </div>
+
+          <div class="product-quantity-container">
+            <select>
+              <option selected value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+
+          <div class="product-spacer"></div>
+
+          <div class="added-to-cart">
+            <img src="images/icons/checkmark.png">
+            Added
+          </div>
+
+          <button class="add-to-cart-button button-primary">
+            Add to Cart
+          </button>
+        </div>
+        <div class="product-container">
+          <div class="product-image-container">
+            <img class="product-image"
+              src="images/products/Garlic masala.jpeg">
+          </div>
+
+          <div class="product-name limit-text-to-2-lines">
+            Garlic Masala
+          </div>
+
+          <div class="product-rating-container">
+            <img class="product-rating-stars"
+              src="images/ratings/rating-45.png">
+            <div class="product-rating-count link-primary">
+              36
+            </div>
+          </div>
+
+          <div class="product-price">
+            Ksh 799
+          </div>
+
+          <div class="product-quantity-container">
+            <select>
+              <option selected value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+
+          <div class="product-spacer"></div>
+
+          <div class="added-to-cart">
+            <img src="images/icons/checkmark.png">
+            Added
+          </div>
+
+          <button class="add-to-cart-button button-primary">
+            Add to Cart
+          </button>
+        </div>
+        <div class="product-container">
+          <div class="product-image-container">
+            <img class="product-image"
+              src="images/products/fish and fries.jpeg">
+          </div>
+
+          <div class="product-name limit-text-to-2-lines">
+            fish and fries
+          </div>
+
+          <div class="product-rating-container">
+            <img class="product-rating-stars"
+              src="images/ratings/rating-40.jpeg">
+            <div class="product-rating-count link-primary">
+              60
+            </div>
+          </div>
+
+          <div class="product-price">
+            Ksh 299
+          </div>
+
+          <div class="product-quantity-container">
+            <select>
+              <option selected value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+
+          <div class="product-spacer"></div>
+
+          <div class="added-to-cart">
+            <img src="images/icons/checkmark.png">
+            Added
+          </div>
+
+          <button class="add-to-cart-button button-primary">
+            Add to Cart
+          </button>
+        </div>
+        <div class="product-container">
+          <div class="product-image-container">
+            <img class="product-image"
+              src="images/products/Fried chicken.jpeg">
+          </div>
+
+          <div class="product-name limit-text-to-2-lines">
+            Fried chicken
+          </div>
+
+          <div class="product-rating-container">
+            <img class="product-rating-stars"
+              src="images/ratings/rating-45.png">
+            <div class="product-rating-count link-primary">
+              84
+            </div>
+          </div>
+
+          <div class="product-price">
+            Ksh 999
+          </div>
+
+          <div class="product-quantity-container">
+            <select>
+              <option selected value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+
+          <div class="product-spacer"></div>
+
+          <div class="added-to-cart">
+            <img src="images/icons/checkmark.png">
+            Added
+          </div>
+
+          <button class="add-to-cart-button button-primary">
+            Add to Cart
+          </button>
+        </div>
+        <div class="product-container">
+          <div class="product-image-container">
+            <img class="product-image"
+              src="images/products/frozen french fries.jpg">
+          </div>
+
+          <div class="product-name limit-text-to-2-lines">
+            Frozen french fries
+          </div>
+
+          <div class="product-rating-container">
+            <img class="product-rating-stars"
+              src="images/ratings/rating-45.png">
+            <div class="product-rating-count link-primary">
+              99
+            </div>
+          </div>
+
+          <div class="product-price">
+            399
+          </div>
+
+          <div class="product-quantity-container">
+            <select>
+              <option selected value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+
+          <div class="product-spacer"></div>
+
+          <div class="added-to-cart">
+            <img src="images/icons/checkmark.png">
+            Added
+          </div>
+
+          <button class="add-to-cart-button button-primary">
+            Add to Cart
+          </button>
+        </div>
+        <div class="product-container">
+          <div class="product-image-container">
+            <img class="product-image"
+              src="images/products/ugali beef.jpeg">
+          </div>
+
+          <div class="product-name limit-text-to-2-lines">
+            Ugali beef
+          </div>
+
+          <div class="product-rating-container">
+            <img class="product-rating-stars"
+              src="images/ratings/rating-45.png">
+            <div class="product-rating-count link-primary">
+              52
+            </div>
+          </div>
+
+          <div class="product-price">
+            Ksh 120
+          </div>
+
+          <div class="product-quantity-container">
+            <select>
+              <option selected value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+
+          <div class="product-spacer"></div>
+
+          <div class="added-to-cart">
+            <img src="images/icons/checkmark.png">
+            Added
+          </div>
+
+          <button class="add-to-cart-button button-primary">
+            Add to Cart
+          </button>
+        </div> 
+    </div>
+    <footer class="">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores officiis aliquid libero maiores nemo delectus assumenda suscipit illum quis. Eum dolor, doloremque sunt nihil voluptatem odio ullam et autem molestiae?
+
+    </footer>
+    <script src="data/products.js"></script>
+    <script src="scripts/JFC Delicacy.js"></script>
+  </body>
+</html>
