@@ -1,97 +1,64 @@
-import { cart } from "../data/cart";
-import { products } from "../data/products.js";
+import {cart, removeFromCart} from '../data/cart.js';
+import {products} from '../data/products.js';
 
-let cartSummaryHTML = "";
-
-cart.forEach((cartItem) => {
-    const productId = cartItem.productId;
-
-    let matchingProduct;
-    products.forEach((product) => {
-        if (productId === productId) {
-            matchingProduct = product;
-        }
-    });
-
-
-    cartSummaryHTML += `
-   <div class="cart-item-container">
-
-            <div class="cart-item-details-grid">
-              <img class="product-image"
-                src="${matchingProduct.image}">
-
-              <div class="cart-item-details">
-                <div class="product-name">
-                  ${matchingProduct.name}
-                </div>
-                <div class="product-price">
-                Ksh ${matchingProduct.price}
-                </div>
-                <div class="product-quantity">
-                  <span>
-                    Quantity: <span class="quantity-label">${cartItem.quantity}</span>
-                  </span>
-                  <span class="update-quantity-link link-primary">
-                    Update
-                  </span>
-                  <span class="delete-quantity-link link-primary">
-                    Delete
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div> 
-
-    `;
-});
-import {cart } from "../data/cart";
-import{products} from "../data/products.js";
-
-let cartSummaryHTML = "";
+let cartSummaryHTML = '';
 
 cart.forEach((cartItem) => {
-const productId = cartItem.productId;
+  const productId = cartItem.productId;
 
-let matchingProduct;
-products.forEach( (product) => {
- if (productId === productId){
-    matchingProduct = product;
- }
-});
+  let matchingProduct;
 
+  products.forEach((product) => {
+    if (product.id === productId) {
+      matchingProduct = product;
+    }
+  });
 
- cartSummaryHTML += `
-   <div class="cart-item-container">
+  cartSummaryHTML += `
+    <div class="cart-item-container
+      js-cart-item-container">
+      
 
       <div class="cart-item-details-grid">
-    <img class="product-image"
-        src="${matchingProduct.image}">
+        <img class="product-image"
+          src="${matchingProduct.image}">
 
-              <div class="cart-item-details">
-                <div class="product-name">
-                  ${matchingProduct.name}
-                </div>
-                <div class="product-price">
-                Ksh ${matchingProduct.price}
-                </div>
-                <div class="product-quantity">
-                  <span>
-                    Quantity: <span class="quantity-label">${cartItem.quantity}</span>
-                  </span>
-                  <span class="update-quantity-link link-primary">
-                    Update
-                  </span>
-                  <span class="delete-quantity-link link-primary">
-                    Delete
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div> 
-
-    `;
+        <div class="cart-item-details">
+          <div class="product-name">
+            ${matchingProduct.name}
+          </div>
+          <div class="product-price">
+            Ksh${matchingProduct.price}
+          </div>
+          <div class="product-quantity">
+            <span>
+              Quantity: <span class="quantity-label">${cartItem.quantity}</span>
+            </span>
+            <span class="update-quantity-link link-primary">
+              Update
+            </span>
+            <span class="delete-quantity-link link-primary js-delete-link" data-product-id="${matchingProduct.id}">
+              Delete
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
 });
 
-document.querySelector('.js-order-summary').innerHTML = cartSummaryHTML;
+document.querySelector('.js-order-summary')
+  .innerHTML = cartSummaryHTML;
 
+document.querySelectorAll('.js-delete-link')
+  .forEach((link) => {
+    link.addEventListener('click', () => {
+      const productId = link.dataset.productId;
+      removeFromCart(productId);
+
+      const container = document.querySelector(
+        `.js-cart-item-container-${productId}`
+      );
+      container.remove();
+    });
+  });
