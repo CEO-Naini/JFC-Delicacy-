@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <link rel="stylesheet" href="styles/login.css">
+</head>
+<body>
+    <div class="container">
+      <p class="welcome-message"> Welcome to JFC Delicacy, the home of delicious meals. We're simply superior.
+        Login or sign up to acces our menus and place your order. Happy browsing!
+      </p>
+        <h2>Login</h2>
+        <input type="email" id="login-email" placeholder="Email" required>
+        <input type="password" id="login-password" placeholder="Password" required>
+        <button onclick="login()">Login</button>
+        <p id="login-message"></p>
+
+        <h2>Don't have an account? Signup</h2>
+        <input type="email" id="signup-email" placeholder="Email" required>
+        <input type="password" id="signup-password" placeholder="Password" required>
+        <button onclick="signup()">Signup</button>
+        <p id="signup-message"></p>
+    </div>
+    <script src="scripts/login.js"></script>
+</body>
+</html>

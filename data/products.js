@@ -1,4 +1,27 @@
+export function getProduct(productId) {
+  let matchingProduct;
+
+  products.forEach((product) => {
+    if (product.id === productId) {
+      matchingProduct = product;
+    }
+  });
+
+  return matchingProduct;
+}
+  
+  
 export const products = [
+  {
+    id: "8c9c52b5-5a19-4bcb-a5d1-158a74287c53",
+    image: "images/products/5 piece chicken.jpeg",
+    name: "5 piece chicken",
+    rating: {
+      stars: 4.5,
+      count: 76
+    },
+    price: 1230
+  },
   {
     id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
     image: "images/products/200g chips masala.jpg",
@@ -178,5 +201,15 @@ export const products = [
       count: 52
     },
     price: 120
+  },
+  {
+    id: "3ebe75dc-64d2-4137-8860-1f5a963e534b",
+    image: "images/products/200g Bhajia.jpeg",
+    name: " 200g Bhajia",
+    rating: {
+      stars: 4.5,
+      count: 37
+    },
+    price: 230
   },
 ];

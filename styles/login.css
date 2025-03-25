@@ -1,0 +1,35 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #beb2b2;
+  background-image: url("https://cdn1.designhill.com/uploads/personal_designs/06154e7085aef2fe630f54ccd135cd12-19a8077b5c48f97c42de53d7d9b52f8216824940450343.png?ver=2.12.79");
+}
+
+.container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+
+input, button {
+  margin: 10px 0;
+  width: 100%;
+  padding: 10px;
+  color: yellowgreen;
+}
+
+h2 {
+  font-size: medium;
+}
+
+.welcome-message {
+ font-size: small;
+ font-family: cursive;
+ color: #9c7272;
+}

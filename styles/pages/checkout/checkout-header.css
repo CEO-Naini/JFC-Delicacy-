@@ -5,7 +5,7 @@
   background-color: white;
 
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 
   position: fixed;
   top: 0;
@@ -29,6 +29,7 @@
 .JFC-logo {
   width: 100px;
   margin-top: 12px;
+  border-radius: 50px;
 }
 
 /* @media is used to create responsive design (making the
@@ -54,7 +55,7 @@
   font-weight: 500;
 
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .return-to-home-link {
