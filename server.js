@@ -3,7 +3,6 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const axios = require("axios");
-
 const connectDB = require("./backend/config.js");
 const productRoutes = require("./routes/productroutes.js");
 const userRoutes = require("./routes/userroutes.js");

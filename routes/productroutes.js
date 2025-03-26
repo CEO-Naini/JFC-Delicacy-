@@ -65,9 +65,4 @@ router.delete("/:id", async (req, res) => {
     res.status(500).json({ message: "Server error", error });
   }
 });
-
-router.get("/", (req, res) => {
-  res.json({ message: "Product routes are working!" });
-});
-
 module.exports = router;
