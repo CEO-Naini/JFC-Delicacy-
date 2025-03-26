@@ -3,26 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login page</title>
-    <link rel="stylesheet" href="styles/login.css">
+    <title>Login / Signup</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 350px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 15px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #218838;
+        }
+
+        p {
+            margin-top: 10px;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-      <p class="welcome-message"> Welcome to JFC Delicacy, the home of delicious meals. We're simply superior.
-        Login or sign up to acces our menus and place your order. Happy browsing!
-      </p>
-        <h2>Login</h2>
-        <input type="email" id="login-email" placeholder="Email" required>
-        <input type="password" id="login-password" placeholder="Password" required>
-        <button onclick="login()">Login</button>
-        <p id="login-message"></p>
 
-        <h2>Don't have an account? Signup</h2>
-        <input type="email" id="signup-email" placeholder="Email" required>
-        <input type="password" id="signup-password" placeholder="Password" required>
-        <button onclick="signup()">Signup</button>
-        <p id="signup-message"></p>
+    <div class="container">
+        <h2 id="form-title">Login</h2>
+        <div id="error-msg" class="error"></div>
+
+        <form id="auth-form">
+            <input type="email" id="email" placeholder="Enter Email" required>
+            <input type="password" id="password" placeholder="Enter Password" required>
+            <button type="submit">Login</button>
+        </form>
+
+        <p id="toggle-text">Don't have an account? <a href="#" id="toggle-form">Sign Up</a></p>
     </div>
-    <script src="scripts/login.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let isSignup = false;
+
+            const formTitle = document.getElementById("form-title");
+            const form = document.getElementById("auth-form");
+            const errorMsg = document.getElementById("error-msg");
+            const toggleText = document.getElementById("toggle-text");
+
+            function toggleAuthForm(e) {
+                e.preventDefault();
+                isSignup = !isSignup;
+
+                // Update UI text
+                formTitle.innerText = isSignup ? "Sign Up" : "Login";
+                form.querySelector("button").innerText = isSignup ? "Sign Up" : "Login";
+                toggleText.innerHTML = isSignup
+                    ? 'Already have an account? <a href="#" id="toggle-form">Login</a>'
+                    : 'Don\'t have an account? <a href="#" id="toggle-form">Sign Up</a>';
+
+                // Rebind event listener
+                document.getElementById("toggle-form").addEventListener("click", toggleAuthForm);
+            }
+
+            // Bind initial event listener
+            document.getElementById("toggle-form").addEventListener("click", toggleAuthForm);
+
+            // Handle form submission
+            // Handle form submission
+            form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    errorMsg.innerText = "";
+
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    const endpoint = isSignup ? "/signup" : "/login";
+
+    try {
+        const response = await fetch(`http://localhost:4000/api${endpoint}`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ email, password }),
+        });
+
+        const data = await response.json();
+        
+        if (!response.ok) {
+            throw new Error(data.message || "Something went wrong");
+        }
+
+        alert(data.message || "Success");
+
+        if (!isSignup) {
+            localStorage.setItem("user_id", data.user_id); // Store user_id after login
+            
+            // Redirect to JFC Delicacy page after successful login
+            window.location.href = "JFC Delicacy.html";
+        }
+
+    } catch (error) {
+        errorMsg.innerText = error.message;
+    }
+});
+
+
+
+        });
+    </script>
+
 </body>
 </html>
